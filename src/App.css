@@ -1,0 +1,40 @@
+.loginPageMain{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+form{
+  height: 50vh;
+  width: 300px;
+  color: white;
+
+
+}
+
+input{
+width: 100%;
+padding: 8px 7px;
+font-size: 16px;
+background-color: white;
+color: black;
+margin: 5px 0px;
+outline: none;
+border-radius: 10px;
+}
+
+input:focus{
+  border-color:white ;
+}
+
+.input-error{
+  border-color: #fc8181;
+}
+
+.error{
+  color: #fc8181;
+  font-size: 12px;
+  text-align: left;
+
+}
