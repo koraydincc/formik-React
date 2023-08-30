@@ -4,6 +4,7 @@ import { loginSchema } from '../schemas'
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+import {Link} from 'react-router-dom'
 import '../App.css'
 
 function Login() {
@@ -55,9 +56,12 @@ function Login() {
                <Button type='submit' variant="contained" color="success" disabled={isSubmitting} style={{margin:'10px'}}>
                  Giriş Yap
                </Button>
-               <Button variant='contained' color="success" className='registerBtn'>
+
+               <Link to='/register'><Button  variant='contained' color="success" className='registerBtn'>
                  Kayıt Ol
-               </Button>
+               </Button ></Link>
+               
+               
 
             </div>
           
