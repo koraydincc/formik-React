@@ -53,7 +53,7 @@ function Login() {
          
             
             <div className='buttonDiv'>
-               <Button type='submit' variant="contained" color="success" disabled={isSubmitting} style={{margin:'10px'}}>
+               <Button type='submit' variant="contained"  disabled={isSubmitting} style={{margin:'10px'}}>
                  Giriş Yap
                </Button>
 
