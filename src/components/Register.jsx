@@ -5,6 +5,7 @@ import CustomInput from './CustomInput'
 import { registerSchema } from '../schemas'
 import CustomCheckbox from './CustomCheckbox'
 import Button from '@mui/material/Button';
+import Login from './Login'
 
 const onSubmit = async (values, actions, users, setUsers) => {
   await new Promise((resolve) => {
@@ -20,16 +21,17 @@ const onSubmit = async (values, actions, users, setUsers) => {
 
 function Register() {
   const [users, setUsers] = useState([]);
-  console.log(users)
 
+  console.log(users)
   return (
     <div className='registerDiv'>
       <Formik
         initialValues={{ email: '', username: '', password: '', repassword: '', isAccepted: false }}
         onSubmit={(values, actions) => onSubmit(values, actions, users, setUsers)}
         validationSchema={registerSchema}
+        
       >
-        {(isSubmitting) => (
+        {(isSubmitting, users) => (
           <Form>
             <CustomInput name='username' type='text' placeholder='Kullanıcı Adınızı Giriniz'></CustomInput>
             <CustomInput name='email' type='text' placeholder='Email Adresinizi Giriniz'></CustomInput>
@@ -39,14 +41,15 @@ function Register() {
             <Button variant='contained' color='success' style={{ margin: '10px' }} type="submit">
               Kayıt Ol
             </Button>
-            <Link to='/'>
-              <Button variant='contained'>Anasayfaya Dön</Button>
-            </Link>
+            <Link to='/'><Button variant='contained' >Anasayfaya Dön</Button></Link>
+           
           </Form>
         )}
       </Formik>
     </div>
+     
   );
+
 }
 
 export default Register;
